@@ -15,7 +15,6 @@ def get_formatted_time(tz=timezone("UTC")):
 	current_wall_clock_epoch = time.clock_gettime(time.CLOCK_REALTIME)
 	# convert wall-clock epoch to datetime and apply timezone transformation
 	current_datetime = datetime.fromtimestamp(current_wall_clock_epoch, tz)	
-	
 	return current_datetime.strftime("%H:%M:%S")
 
 

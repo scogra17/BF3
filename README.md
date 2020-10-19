@@ -2,7 +2,7 @@
 
 ## About
 This project implements an api with a single endpoint to return the 
-server wallclock time (see [Google sheet](https://docs.google.com/document/d/1F-eGgUg6_c0UZuk0HssdgZLyPe9k1zeEeCdCs-tGaWA/edit?usp=sharing) for more information). The client
+server wall-clock time (see [Google sheet](https://docs.google.com/document/d/1F-eGgUg6_c0UZuk0HssdgZLyPe9k1zeEeCdCs-tGaWA/edit?usp=sharing) for more information). The client
 can also specify an optional timezone parameter, which will output 
 the current time in that timezone. 
 
@@ -30,13 +30,13 @@ To prepare your system to run this project:
 
 ```bash
 # Valid request - valid timezone - returns 200
-curl -i -H "Content-Type: application/json" -X POST -d '{"tz":"America/Los_Angeles"}' [http://127.0.0.1:5000]/wallclock/api/v1.0/time
+curl -i -H "Content-Type: application/json" -X POST -d '{"tz":"America/Los_Angeles"}' http://127.0.0.1:5000/wallclock/api/v1.0/time
 
 # Valid request - no timezone - returns 200 
-curl -i -H "Content-Type: application/json" -X POST -d '{}' [http://127.0.0.1:5000]/wallclock/api/v1.0/time
+curl -i -H "Content-Type: application/json" -X POST -d '{}' http://127.0.0.1:5000/wallclock/api/v1.0/time
 
 # Inalid request - invalid timezone - returns 400 
-curl -i -H "Content-Type: application/json" -X POST -d '{"tz": Space/Mars}' [http://127.0.0.1:5000]/wallclock/api/v1.0/time
+curl -i -H "Content-Type: application/json" -X POST -d '{"tz": Space/Mars}' http://127.0.0.1:5000/wallclock/api/v1.0/time
 
 ```
 
